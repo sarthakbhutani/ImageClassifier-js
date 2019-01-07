@@ -29,16 +29,16 @@ function modelLoaded() {
 
 function keyPressed(){
   let features = featureExtractor.infer(video);
-  if(key=='c'){
+  if(key=='h'){
     //ADD EXAMPLE DATASET
-    knn.addExample(features,'cat'); //CHANGE TO human
-    console.log('cat');
+    knn.addExample(features,'human'); 
+    console.log('human');
   }
-  else if(key=='d'){
-    knn.addExample(features,'dog') //CHANGE TO not human
-    console.log('dog');
+  else if(key=='n'){
+    knn.addExample(features,'notHuman');
+    console.log('not human');
   } else if (key=='s'){
-    knn.save('sampleDataCatDogs');
+    knn.save('humanNotHuman');
     console.log('saved');
   }
   //predicting
@@ -63,3 +63,9 @@ function gotResult(error,result){
     console.log('working till here, after being updated');
   }
 }
+
+
+// Further Ideas:
+// functionality to create your own labels/classes
+// add html elements, buttons, create games
+// play with Tensor & dataSync() element
