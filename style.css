@@ -5,3 +5,7 @@ html, body {
 canvas {
   display: block;
 }
+.custom-alert {
+  width: 19rem;
+  text-align: center;
+}

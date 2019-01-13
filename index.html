@@ -1,14 +1,27 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html><head>
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="ml5.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <meta charset="utf-8">
 
   </head>
   <body>
-    <script src="sketch.js"></script>
-  
-
-</body></html>
+      <video autoplay="true" width="0" height="0" id="video videoElement class="vsc-initialized""></video>
+      <script src="sketch.js"></script>
+    <button type="button" onclick="btnPress()" value="h" class="btn btn-success">Human</button>
+    <button type="button" onclick="btnPress(n)"  class="btn btn-danger">Not Human</button>
+    <br>
+    <button type="button" onclick="btnPress(p)" class="btn btn-outline-primary">Predict</button>
+    <br>
+    <br>
+    <span id="resultModify" class="alert alert-info custom-alert" role="alert">
+      No training data yet
+    </span>
+    <p id="change">
+      change here
+    </p>
+  </body>
